@@ -4,15 +4,16 @@ import homeImage from "/src/images/homeImage.jpg";
 {
 
 const content = document.getElementById('content');
+const dynamicContent = document.createElement('div');
+dynamicContent.id = 'dynamic-content';
 const homePage = document.createElement('div');
 homePage.id = 'homepage';
 const addHomeImage = addImage()
 const addHomeDescription = addDescription();
 homePage.appendChild(addHomeDescription)
 homePage.appendChild(addHomeImage);
-content.appendChild(homePage);
-
-
+dynamicContent.appendChild(homePage)
+content.appendChild(dynamicContent);
 
 }
 
