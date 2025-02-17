@@ -6,17 +6,32 @@ import homeImage from "/src/images/homeImage.jpg";
 const content = document.getElementById('content');
 const dynamicContent = document.createElement('div');
 dynamicContent.id = 'dynamic-content';
+
 const homePage = document.createElement('div');
 homePage.id = 'homepage';
+
 const addHomeImage = addImage()
 const addHomeDescription = addDescription();
+const addHomeHeader = addHomePageHeader();
+
+homePage.appendChild(addHomeHeader);
 homePage.appendChild(addHomeDescription)
 homePage.appendChild(addHomeImage);
 dynamicContent.appendChild(homePage)
+
 content.appendChild(dynamicContent);
 
 }
 
+function addHomePageHeader()
+{
+    const homeheader = document.createElement('p');
+    homeheader.id = 'home-page-header';
+    homeheader.innerHTML = "Chef's Delight Restaurant";
+
+    return homeheader;
+
+} 
 const addImage = ()=>
 {
     const imgContainer = document.createElement('div');
