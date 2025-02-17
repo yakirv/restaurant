@@ -1,6 +1,7 @@
 import './styles.css';
 import {homePageData} from "./home.js";
 import { menuPageData } from './menu.js';
+import { AddaboutPage } from './about.js';
 
 homePageData();  
 
@@ -29,6 +30,5 @@ menuButton.addEventListener('click',()=>
             {
             const content = document.getElementById('content');
             const dynamicContent = document.getElementById('dynamic-content');
-            dynamicContent.innerText ="About";
-           // content.removeChild(dynamicContent)
-            })
+             content.removeChild(dynamicContent)
+             AddaboutPage()})
